@@ -1,0 +1,46 @@
+{
+    "template": "<div ng-init=\"state = itemValue(config.item)\" style=\"font-size: {{config.TextSize}}px;\">\n  {{config.Label}}                             \n  <div ng-if=\"state === config.GoodState\">\n\t  <div style=\"font-size: {{config.IconSize}}px;color:darkgreen;\">\n      <i class=\"fa {{config.GoodIcon}}\"></i>\n    </div>\n  </div>\n  <div ng-if=\"state === config.BadState\">\n\t  <div style=\"font-size: {{config.IconSize}}px;color:firebrick;\">\n  \t\t<i class=\"fa {{config.BadIcon}}\"></i>\n    </div>\n  </div>\n  <div ng-if=\"state != config.BadState && state != config.GoodState\">\n\t  <div style=\"font-size: {{config.IconSize}}px;color:coral;\">\n\t  \t<i class=\"fa fa-exclamation-circle\"></i>\n    </div>\n  </div>\n</div>\n",
+    "settings": [
+        {
+            "type": "item",
+            "id": "item"
+        },
+        {
+            "type": "string",
+            "id": "GoodState"
+        },
+        {
+            "type": "string",
+            "id": "GoodIcon"
+        },
+        {
+            "type": "string",
+            "id": "BadState"
+        },
+        {
+            "type": "string",
+            "id": "BadIcon"
+        },
+        {
+            "type": "string",
+            "id": "Label"
+        },
+        {
+            "type": "number",
+            "id": "IconSize",
+            "label": "Icon size in px",
+            "default": "24",
+            "description": "Icon size in px"
+        },
+        {
+            "type": "number",
+            "id": "TextSize",
+            "label": "Text size in px",
+            "default": "12",
+            "description": "Text size in px"
+        }
+    ],
+    "name": "Triple State Widget",
+    "author": "Bernd Weymann",
+    "description": "Widget für Openhab Panel um die Zustände gut, schlecht und undefiniert anzeigt"
+}
